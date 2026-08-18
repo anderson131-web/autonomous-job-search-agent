@@ -1,0 +1,16 @@
+node_modules/
+
+# Runtime state — the agent's own SQLite DB, WAL files, caches, logs, and
+# any screenshots taken during a live apply run. All regenerated on first
+# run; none of it belongs in version control.
+agent/data/*
+!agent/data/.gitkeep
+
+.env
+.env.local
+*.log
+
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

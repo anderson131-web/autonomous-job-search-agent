@@ -1,0 +1,23 @@
+{
+  "name": "autonomous-job-search-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "24/7 autonomous US job-search and application agent (uses an LLM for scoring and decisions) — an add-on module for career-ops",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "doctor": "node agent/doctor.mjs",
+    "start": "node agent/cli.mjs start",
+    "scan": "node agent/cli.mjs scan",
+    "dashboard": "node agent/dashboard-server.mjs",
+    "test": "node --test agent/*.test.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.70.0",
+    "dotenv": "^17.0.0",
+    "playwright": "^1.62.1",
+    "zod": "^4.4.3"
+  }
+}
